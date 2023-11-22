@@ -3,7 +3,7 @@ echo "Installing BetterGit"
 PROFILE="$HOME/.bash_profile"
 WRITE_FLAG=false
 BETTER_CLONE_FUNC="function better_git_clone {sh C:\BetterGit\better_clone.sh \$args}"
-
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 if [ -n "$1" ]; then
     PROFILE=$1
 fi
@@ -19,8 +19,10 @@ if [ ! -n "$INSTALL_DEST\better_clone.sh" ]; then
 fi
 
 echo "Updating $INSTALL_DEST"
-cp "$(dirname "$0")\better_clone.sh" "$INSTALL_DEST\better_clone.sh"
-
+cp "$SCRIPT_DIR/better_clone.sh" "$INSTALL_DEST\better_clone.sh"
+echo "$SCRIPT_DIR"
+rm -rf "$SCRIPT_DIR"
+echo "Cleaned up install files $(dirname "$0")"
 if [ -z "$PROFILE" ]; then
     echo "No profile found. Creating one at $PROFILE"
     touch $PROFILE
