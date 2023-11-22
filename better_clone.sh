@@ -23,7 +23,7 @@ if [ -n "$1" ]; then
     fi
 fi
 
-DESTINATION=${pwd}
+DESTINATION="$(dirname "$0")"
 if [ -n "$2" ]; then
     DESTINATION="$2"
 fi
