@@ -10,9 +10,18 @@ In order to install in Windows PowerShell:
 git clone https://github.com/se-jo-ma/better_git
 sh .\better_git\install.sh -r $PROFILE
 ```
-These commands clone this repo, run the install script and then delete the residual files. 
-The install script can take an argument for the PowerShell Profile you would like to add commands to, in the above commands it uses the current Profile location.
-The install script can also be given either of these flags ```r``` or ```R``` in order to remove the initial install files. If you do that make sure to call it from outside of the directory so it can fully clean up. This flag is present in the above commands.
+* Or Run these commands:
+```
+git clone https://github.com/se-jo-ma/better_git
+.\better_git\install.ps1
+```
+These commands clone this repo, run the install script and then delete the residual files.
+
+The install.ps1 script does not take arguments, uses the current profile, and cleans up the install files afterwards.
+
+The install.sh script can take an argument for the PowerShell Profile you would like to add commands to, in the above commands it uses the current Profile location.
+The install.sh script can also be given either of these flags ```r``` or ```R``` in order to remove the initial install files. If you do that make sure to call it from outside of the directory so it can fully clean up. This flag is present in the above commands.
+
 You will need to open a new PowerShell instance with the Profile specified after installing in order to use the below commands.
 
 ## How to Use
