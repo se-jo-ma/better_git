@@ -10,7 +10,7 @@ In order to install in Windows PowerShell:
 git clone https://github.com/se-jo-ma/better_git
 sh .\better_git\install.sh $PROFILE
 ```
-All these commands do is clone this repo and then run the install script from this repo. The install script does require an argument for the PowerShell Profile you would like to add commands to, in the above commands it uses the current Profile location.
+These commands clone this repo, run the install script and then delete the residual files. The install script requires an argument for the PowerShell Profile you would like to add commands to, in the above commands it uses the current Profile location.
 The commands will be available when you open a new PowerShell instance with the Profile specified.
 
 ## How to Use
