@@ -39,3 +39,5 @@ Right now there is only command: better_git_clone
   * ```git clone https://github.com/se-jo-ma/better_git.git ./ && cd better_git && git pull```
   * ```better_git_clone -g se-jo-ma/better_git```
   * ```bgc -g se-jo-ma/better_git```
+* ### bgupdate
+  This has not been implemented yet but it will allow you to update better_git with the latest and greatest.
